@@ -1,10 +1,13 @@
+using Book_manager.Repository;
 using FluentMigrator.Runner;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddControllers();
 
+builder.Services.AddScoped<IBooksRepository, BooksRepository>();
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
@@ -33,6 +36,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.MapControllers();
 
 app.Run();
 

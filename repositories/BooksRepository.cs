@@ -1,6 +1,7 @@
 using Book_manager.Models;
 using Npgsql;
 using Microsoft.Extensions.Configuration;
+using Dapper;
 
 namespace Book_manager.Repository;
 
@@ -21,14 +22,14 @@ public class BooksRepository : IBooksRepository
     return Task.FromResult<IEnumerable<Book>>(books);
   }
 
-  public Task<int> Create(Book item)
+  public async Task<int> CreateAsync(Book item)
   {
     using (var dbConnection = new NpgsqlConnection(_connectionString))
     {
-      var query = $"In";
+      var query = @"INSERT INTO ""Books"" (""Name"", ""Author"", ""ImageUrl"", ""Rating"", ""Status"", ""Description"") 
+                      VALUES (@Name, @Author, @ImageUrl, @Rating, @Status, @Description)";
 
-      return Task.FromResult(1);
+      return await dbConnection.ExecuteAsync(query, item);
     }
-
   }
 }

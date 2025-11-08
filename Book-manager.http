@@ -1,6 +1,18 @@
 @Book_manager_HostAddress = http://localhost:5034
 
-GET {{Book_manager_HostAddress}}/weatherforecast/
+### POST /api/Books
+
+POST {{Book_manager_HostAddress}}/api/Books
 Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "Dom Casmurro",
+  "author": "Machado de Assis",
+  "imageUrl": "https://example.com/domcasmurro.jpg",
+  "rating": 5,
+  "status": 3,
+  "description": "Um clássico da literatura brasileira."
+}
 
 ###

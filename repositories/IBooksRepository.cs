@@ -5,5 +5,5 @@ namespace Book_manager.Repository;
 public interface IBooksRepository
 {
   Task<IEnumerable<Book>> GetAll();
-  Task<int> Create(Book item);
+  Task<int> CreateAsync(Book item);
 }
