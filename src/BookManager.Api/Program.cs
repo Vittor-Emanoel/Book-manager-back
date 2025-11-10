@@ -1,4 +1,5 @@
-using Book_manager.Repository;
+using Book_manager.src.BookManager.Domain.Interfaces;
+using Book_manager.src.BookManager.Infrastructure.repositories;
 using FluentMigrator.Runner;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,7 +10,7 @@ builder.Services.AddControllers();
 
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(Program).Assembly));
 
-builder.Services.AddScoped<IBooksRepository, BooksRepository>();
+builder.Services.AddScoped<IBookRepository, BooksRepository>();
 
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");

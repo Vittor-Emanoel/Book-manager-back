@@ -8,6 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="src\BookManager.Application\Common\Responses\QueryResponse.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="dapper" Version="2.1.66" />
     <PackageReference Include="FluentMigrator" Version="7.1.0" />
     <PackageReference Include="FluentMigrator.Runner" Version="7.1.0" />
@@ -17,6 +21,14 @@
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.21" />
     <PackageReference Include="Npgsql" Version="9.0.4" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="src\BookManager.Tests\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="src\BookManager.Application\Common\Responses\QueryResponse.cs" />
   </ItemGroup>
 
 </Project>

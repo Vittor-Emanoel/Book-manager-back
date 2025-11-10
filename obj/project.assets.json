@@ -3314,24 +3314,26 @@
     ]
   },
   "packageFolders": {
-    "/home/vittor/.nuget/packages/": {}
+    "C:\\Users\\VittorEmanoel\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/vittor/Book-manager/Book-manager.csproj",
+      "projectUniqueName": "C:\\Users\\VittorEmanoel\\Documents\\apps\\Book-manager-back\\Book-manager.csproj",
       "projectName": "Book-manager",
-      "projectPath": "/home/vittor/Book-manager/Book-manager.csproj",
-      "packagesPath": "/home/vittor/.nuget/packages/",
-      "outputPath": "/home/vittor/Book-manager/obj/",
+      "projectPath": "C:\\Users\\VittorEmanoel\\Documents\\apps\\Book-manager-back\\Book-manager.csproj",
+      "packagesPath": "C:\\Users\\VittorEmanoel\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\VittorEmanoel\\Documents\\apps\\Book-manager-back\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/vittor/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\VittorEmanoel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -3344,6 +3346,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -3406,7 +3413,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.121/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.206/PortableRuntimeIdentifierGraph.json"
       }
     }
   },
@@ -3415,7 +3422,7 @@
       "code": "NU1608",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Detected package version outside of dependency constraint: MediatR.Extensions.Microsoft.DependencyInjection 11.1.0 requires MediatR (>= 11.0.0 && < 12.0.0) but version MediatR 13.1.0 was resolved.",
+      "message": "Versão detectada do pacote fora da restrição de dependência: MediatR.Extensions.Microsoft.DependencyInjection 11.1.0 requer MediatR (>= 11.0.0 && < 12.0.0), mas a versão MediatR 13.1.0 foi resolvida.",
       "libraryId": "MediatR",
       "targetGraphs": [
         "net8.0"
